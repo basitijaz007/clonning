@@ -1,0 +1,17 @@
+# Voice Cloning Dependencies
+# IMPORTANT: Requires Python 3.10-3.13 (Python 3.14+ not supported)
+# 
+# Install with: 
+#   uv venv --python 3.11
+#   .venv\Scripts\activate
+#   uv pip install -r requirements.txt
+
+# Coqui TTS library - maintained fork (includes XTTS-v2)
+coqui-tts>=0.27.0
+
+# PyTorch (required for TTS)
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Note: On first run, the XTTS-v2 model (~1.8GB) will be downloaded automatically.
+# GPU with CUDA is recommended for faster generation, but CPU works too.
