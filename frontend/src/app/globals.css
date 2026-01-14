@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --background: #050505;
+  --foreground: #ffffff;
+  --accent: #3b82f6;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(circle at top left, #111, var(--background));
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer utilities {
+  .animate-glow {
+    animation: glow 4s infinite alternate;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+  }
+
+  to {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+  }
+}
